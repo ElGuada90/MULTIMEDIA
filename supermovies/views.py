@@ -11,8 +11,7 @@ def home():
         "index.html",
         title = "EG90  Home",
         message = "Top Stream ",
-        content =  formatted_now)
-    
+        content =  formatted_now)  
     
 @app.route('/login')
 def login():
