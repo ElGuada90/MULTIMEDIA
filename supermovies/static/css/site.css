@@ -81,6 +81,20 @@ body {
    
 }
 
+.navbar button {
+    background-color: #03e9fa; /* Color verde */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+.navbar button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el ratón */
+    color: white;
+}
+
 .message {
     margin: 0;
     font-weight: 600;
@@ -337,6 +351,27 @@ footer p {
     }
 }
 
-
+/* Estilos específicos para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .navbar button {
+        font-size: 14px; /* Ajusta el tamaño de la fuente */
+        padding: 8px 16px; /* Ajusta el relleno */
+        word-wrap: break-word;
+        white-space: normal; /* Permite que el texto se ajuste a varias líneas */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .navbar button {
+        width: 68%;
+        font-size: 12px; /* Tamaño de fuente menor para pantallas más pequeñas */
+        padding: 6px 12px;
+        word-wrap: break-word;
+        white-space: normal; /* Permite que el texto se ajuste a varias líneas */
+    }
+    .navbar a, img{
+        margin-left: 2px;
+    }
+  }
 
 
