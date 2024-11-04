@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../static/images/icon G2.png" sizes="192x192" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="../static/manifest.json">
+    <link rel="stylesheet" href="../static/css/series.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/" class="navbar-brand" aria-label="Brand">
+            <img src="static/images/icon G2.png" class="navbar-logo" alt="">
+        </a>
+        <a href="{{ url_for('series') }}" class="navbar-item">Home</a>
+        <a href="{{ url_for('login') }}" class="navbar-item">Login</a>
+        <button id="installButton" type="button" style="display: none;">Instalar App</button>
+        <div class="navbar-right">{{ content }}</div>
+    </div>
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+        <div class="container">
+            <button onclick="playPause()" type="button">Play/Pause</button>
+            <button onclick="makeBig()" type="button">Big</button>
+            <button onclick="makeSmall()" type="button">Small</button>
+            <button onclick="makeNormal()" type="button">Normal</button>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 1</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Capítulo 1: Título del Capítulo</li>
+                        <li>Capítulo 2: Título del Capítulo</li>
+                        <li>Capítulo 3: Título del Capítulo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 2</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Capítulo 1: Título del Capítulo</li>
+                        <li>Capítulo 2: Título del Capítulo</li>
+                        <li>Capítulo 3: Título del Capítulo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 3</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Capítulo 1: Título del Capítulo</li>
+                        <li>Capítulo 2: Título del Capítulo</li>
+                        <li>Capítulo 3: Título del Capítulo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 4</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Capítulo 1: Título del Capítulo</li>
+                        <li>Capítulo 2: Título del Capítulo</li>
+                        <li>Capítulo 3: Título del Capítulo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 5</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Capítulo 1: Título del Capítulo</li>
+                        <li>Capítulo 2: Título del Capítulo</li>
+                        <li>Capítulo 3: Título del Capítulo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 6</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Capítulo 1: Título del Capítulo</li>
+                        <li>Capítulo 2: Título del Capítulo</li>
+                        <li>Capítulo 3: Título del Capítulo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 7</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="{{ url_for('friendst7c1') }}" aria-label="friends">Capítulo 1: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst7c2') }}" aria-label="friends">Capítulo 2: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst7c3') }}" aria-label="friends">Capítulo 3: Título del Capítulo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 8</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="{{ url_for('friendst8c1') }}" aria-label="friends">Capítulo 1: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst8c2') }}" aria-label="friends">Capítulo 2: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst8c3') }}" aria-label="friends">Capítulo 3: Título del Capítulo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 9</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="{{ url_for('friendst9c1') }}" aria-label="friends">Capítulo 1: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst9c2') }}" aria-label="friends">Capítulo 2: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst9c3') }}" aria-label="friends">Capítulo 3: Título del Capítulo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">Temporada 10</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="{{ url_for('friendst10c1') }}" aria-label="friends">Capítulo 1: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst10c2') }}" aria-label="friends">Capítulo 2: Título del Capítulo</a></li>
+                        <li><a href="{{ url_for('friendst10c3') }}" aria-label="friends">Capítulo 3: Título del Capítulo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>Copyright &copy; EG90 2024</p>
+        </footer>
+    </div>
+    <script src="../static/javascripts/series_player.js" defer></script>
+
+</body>
+</html>
