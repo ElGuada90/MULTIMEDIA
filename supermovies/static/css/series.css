@@ -248,6 +248,15 @@ footer p {
         word-wrap: break-word;
         white-space: normal; /* Permite que el texto se ajuste a varias líneas */
     }
+    .controls {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Alinea los botones al centro */
+    }
+
+    .controls button {
+        width: 100%; /* Hace que los botones ocupen todo el ancho */
+        margin: 5px 0; /* Espaciado vertical entre botones */
+    }
   }
   
   @media (max-width: 400px) {

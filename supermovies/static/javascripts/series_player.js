@@ -1,11 +1,31 @@
 const video = document.querySelector('video');
+let lastTime = 0;
+
+video.addEventListener('pause', () => {
+    lastTime = video.currentTime;
+});
+
+        function rewind() {
+            video.currentTime = Math.max(0, video.currentTime - 10);
+        }
 
         function playPause() {
             if (video.paused) {
-                video.play();
+                const shouldPlay = confirm(`¿Deseas reproducir el video desde el último tiempo? (Último tiempo: ${lastTime.toFixed(2)}s)`);
+                if (shouldPlay) {
+                    video.currentTime = lastTime;
+                    video.play();
+                } else {
+                    video.currentTime = 0; // Reinicia el video al inicio
+                    video.play();
+                }
             } else {
                 video.pause();
             }
+        }
+
+        function forward() {
+            video.currentTime = Math.min(video.duration, video.currentTime + 10);
         }
 
         function makeBig() {
